@@ -1,12 +1,17 @@
 [
     {
-        "title": "Test Note",
-        "text": "Test TestTest TestTest TestTest TestTest TestTest TestTest TestTest TestTest TestTest TestTest TestTest TestTest Test",
-        "note_id": "d3a1db0b-a1f9-4d1a-a75f-d58c17236b93"
+        "title": "Take Medicine",
+        "text": "Take your medicine, you're an old man now",
+        "note_id": "ab526843-fe1b-42ae-9d01-676220ad7a93"
     },
     {
-        "title": "Test Note Title",
-        "text": "Test note title 2nd note here's another note",
-        "note_id": "ef862801-6b98-4f00-bde1-ce83b8dfc1d8"
+        "title": "Turn in your project",
+        "text": "Hey there ya big lug, why don't you go on and turn in your project now that you've finished it?",
+        "note_id": "3d77339a-52f3-4c59-8c91-b7b03e92767d"
+    },
+    {
+        "title": "Add in Keyboard Shortcuts",
+        "text": "This might actually be a pretty good app, but it should be that Cmd + Enter saves the app also",
+        "note_id": "dd9e060a-88c3-4520-b081-22b3de764d20"
     }
 ]

@@ -1,7 +1,11 @@
 const notes = require('express').Router()
 const { uuid } = require('uuidv4')
 
-const { readFromFile, readAndAppend } = require('../helpers/fsUtil')
+const {
+  readFromFile,
+  writeToFile,
+  readAndAppend,
+} = require('../helpers/fsUtil')
 
 // GET Route for retrieving all the notes
 notes.get('/', (req, res) => {
@@ -26,6 +30,22 @@ notes.post('/', (req, res) => {
   } else {
     res.error(`Error in adding note: ${err}`)
   }
+})
+
+// DELETE Route for a specific note
+notes.delete('/:note_id', (req, res) => {
+  const noteId = req.params.note_id
+  readFromFile('./db/db.json')
+    .then(data => JSON.parse(data))
+    .then(json => {
+      // Filter out note with specified uuid
+      const result = json.filter(note => note.note_id == noteId)
+
+      // Save that array to the filesystem
+      writeToFile('./db/db.json', result)
+
+      res.json(`Item ${noteId} has been deleted 🗑️`)
+    })
 })
 
 module.exports = notes
